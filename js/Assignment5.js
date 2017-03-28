@@ -40,6 +40,7 @@ document.getElementById("listdisplay").innerHTML=table;
 
 
 
+
 function gethistory()
 {
 var objRequest= new XMLHttpRequest();
@@ -60,12 +61,11 @@ function GenerateOutput2(result)
 {
     var count = 0;
     table ="";
-  table += ('<th>' + 'Product Name'+
-              '<th>'+'Total');
+  table +=  "<table><tr><th>Product Name</th><th>Total</th></tr>";
   
   for (count = 0; count < result.length; count++)
   {
-  table += "<tr>";
+table+= "<tr>";
 table += "<td>"+ result[count].ProductName+"</td>";
 table += "<td>"+ result[count].Total+"</td>";
 table += "</tr>";
@@ -77,7 +77,7 @@ function getorders()
 {
     var objRequest= new XMLHttpRequest();
     var url = "https://student.business.uab.edu/jsonwebservice/service1.svc/getOrdersForCustomer/";
-    url += document.getElementById("custid").value;
+    url += document.getElementById("custid2").value;
     objRequest.onreadystatechange = function()
     {
         if (objRequest.readyState == 4 && objRequest.status == 200)
@@ -94,13 +94,7 @@ function GenerateOutput3(result)
     var count = 0;
     table ="";
     
-    table += ('<th>' + 'Order Date'+
-              '<th>'+'Order ID' +
-              '<th>'+'Ship Address'+
-              '<th>'+'Ship City'+
-              '<th>'+'Ship Name'+
-              '<th>'+'Ship Postcode'+
-              '<th>'+'Shipped Date');
+    table += "<table><tr><th>Order Date</th><th>Order ID</th><th>Ship Address</th><th>Ship City</th><th>Ship Name</th><th>Ship Postcode</th><th>Shipped Date</th></tr>";
     
     
     
