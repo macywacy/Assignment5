@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Macy Dofash, Assignment 5</title>
+    
+      <link rel="stylesheet" type="text/css" href="styles/Assignment5.css" />
+      <script src="js/Assignment5.js">
+</script>
+</head>
+
+<body>
+    <select onchange="menuchoice()" id="menu">
+        <option>Select</option>
+        <option>CustomerList</option>
+        <option>getCustomerOrderHistory</option>
+        <option>getOrdersForCustomer</option>
+    </select>
+    
+    <section id="section1" class="section1">
+    <button onclick="getlist()" id="custid">CustomerList</button> <br>
+    <table id="listdisplay">Customer List Will Display Here</table></section>
+    
+    <section id="section2" class="section2">
+    <input type=text id="hist"> <br>
+    <button onclick="gethistory()" id="orderhistory">getCustomerOrderHistory</button> <br>
+    <label id="historydisplay">Order History Will Display Here</label>
+    </section>
+    
+    <section id="section3" class="section3">
+    <input type=text id="custid"><br>
+    <button onclick="getorders()" id="getorders">getOrdersForCustomer</button><br>
+    <label id="orderdisplay">Orders Will Display Here</label></section>
+
+
+</body>
+</html>
